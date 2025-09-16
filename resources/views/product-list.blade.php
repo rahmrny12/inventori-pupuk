@@ -7,7 +7,7 @@
         <div class="page-header">
             <div class="add-item d-flex">
                 <div class="page-title">
-                    <h4 class="fw-bold">Product List</h4>
+                    <h4 class="fw-bold">List Pupuk</h4>
                     <h6>Manage your products</h6>
                 </div>
             </div>
