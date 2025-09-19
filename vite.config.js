@@ -7,7 +7,8 @@ export default defineConfig({
     build: {
         manifest: true,
         rtl: true,
-        outDir: 'public/build/',
+        outDir: '../dist',
+        emptyOutDir: true, // also necessary
         cssCodeSplit: true,
         rollupOptions: {
             output: {
