@@ -6,13 +6,13 @@
         <div class="page-header">
             <div class="add-item d-flex">
                 <div class="page-title">
-                    <h4 class="fw-bold">Farmers</h4>
-                    <h6>Manage your farmers</h6>
+                    <h4 class="fw-bold">Data Petani</h4>
+                    <h6>Kelola Data</h6>
                 </div>
             </div>
             <div class="page-btn">
                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-farmer">
-                    <i class="ti ti-circle-plus me-1"></i>Add Farmer
+                    <i class="ti ti-circle-plus me-1"></i>Tambah Petani
                 </a>
             </div>
         </div>
@@ -20,7 +20,7 @@
         <!-- farmer list -->
         <div class="card">
             <div class="card-header">
-                <h5 class="fw-bold mb-0">Farmers List</h5>
+                <h5 class="fw-bold mb-0">List Data Petani</h5>
             </div>
             <div class="card-body p-0">
                 <div class="table-responsive">
@@ -28,11 +28,11 @@
                         <thead class="thead-light">
                             <tr>
                                 <th>NIK</th>
-                                <th>Name</th>
-                                <th>Address</th>
-                                <th>Phone</th>
-                                <th>Birth Date</th>
-                                <th>Gender</th>
+                                <th>Nama</th>
+                                <th>Alamat</th>
+                                <th>Nomor Telepon</th>
+                                <th>Tanggal Lahir</th>
+                                <th>Jenis Kelamin</th>
                                 <th>Land Area</th>
                                 <th>Status</th>
                                 <th class="no-sort"></th>
@@ -82,7 +82,7 @@
                                             @csrf
                                             @method('PUT')
                                             <div class="modal-header">
-                                                <h5 class="modal-title">Edit Farmer</h5>
+                                                <h5 class="modal-title">Edit Data Petani</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                             </div>
                                             <div class="modal-body">
@@ -91,23 +91,23 @@
                                                     <input type="text" name="nik" class="form-control" value="{{ $farmer->nik }}" required>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label class="form-label">Name</label>
+                                                    <label class="form-label">Nama</label>
                                                     <input type="text" name="farmer_name" class="form-control" value="{{ $farmer->farmer_name }}" required>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label class="form-label">Address</label>
+                                                    <label class="form-label">Alamat</label>
                                                     <textarea name="address" class="form-control" required>{{ $farmer->address }}</textarea>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label class="form-label">Phone</label>
+                                                    <label class="form-label">Nomor Telepon</label>
                                                     <input type="text" name="phone_number" class="form-control" value="{{ $farmer->phone_number }}">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label class="form-label">Birth Date</label>
+                                                    <label class="form-label">Tanggal Lahir</label>
                                                     <input type="date" name="birth_date" class="form-control" value="{{ $farmer->birth_date }}">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label class="form-label">Gender</label>
+                                                    <label class="form-label">Jenis Kelamin</label>
                                                     <select name="gender" class="form-select" required>
                                                         <option value="L" {{ $farmer->gender == 'L' ? 'selected' : '' }}>Laki-laki</option>
                                                         <option value="P" {{ $farmer->gender == 'P' ? 'selected' : '' }}>Perempuan</option>
@@ -127,7 +127,7 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-primary">Update Farmer</button>
+                                                <button type="submit" class="btn btn-primary">Simpan Data Petani</button>
                                             </div>
                                         </form>
                                     </div>
@@ -151,7 +151,7 @@
             <form action="{{ route('farmers.store') }}" method="POST">
                 @csrf
                 <div class="modal-header">
-                    <h5 class="modal-title">Add Farmer</h5>
+                    <h5 class="modal-title">Tambah Data Petani</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
@@ -160,30 +160,30 @@
                         <input type="text" name="nik" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Name</label>
+                        <label class="form-label">Nama</label>
                         <input type="text" name="farmer_name" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Address</label>
+                        <label class="form-label">Alamat</label>
                         <textarea name="address" class="form-control"></textarea>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Phone</label>
+                        <label class="form-label">Nomor Telepon</label>
                         <input type="text" name="phone_number" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Birth Date</label>
+                        <label class="form-label">Tanggal Lahir</label>
                         <input type="date" name="birth_date" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Gender</label>
+                        <label class="form-label">Jenis Kelamin</label>
                         <select name="gender" class="form-select" required>
                             <option value="L">Laki-laki</option>
                             <option value="P">Perempuan</option>
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Land Area (Ha)</label>
+                        <label class="form-label">Luas Lahan (Ha)</label>
                         <input type="number" step="0.01" name="land_area" class="form-control">
                     </div>
                     <div class="mb-3">
@@ -196,7 +196,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save Farmer</button>
+                    <button type="submit" class="btn btn-primary">Simpan Data Petani</button>
                 </div>
             </form>
         </div>
