@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\FarmerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,10 @@ Route::get('/index', function () {
 Route::get('/admin-dashboard', function () {
     return view('admin-dashboard');
 })->name('admin-dashboard');
+
+Route::resource('farmers', FarmerController::class);
+
+// =======================================================
 
 Route::get('/product-list', function () {
     return view('product-list');

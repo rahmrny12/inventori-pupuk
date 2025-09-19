@@ -194,3 +194,35 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="{{ url('build/css/style.css') }}">
+
+    <!-- <link rel="stylesheet" href="{{ url('build/css/custom.css') }}"> -->
+
+    <style>
+        .login-wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .login-content {
+            flex: 1; /* Form di kiri */
+            background: #fff;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-image {
+            flex: 1; /* Gambar di kanan */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .login-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    </style>

@@ -2,19 +2,19 @@
 @extends('layout.mainlayout')
 @section('content')
             <div class="account-content">
-				<div class="login-wrapper bg-img">
+				<div class="login-wrapper bg-img bg-login">
                     <div class="login-content authent-content">
                         <form action="{{url('index')}}">
                             <div class="login-userset">
-                                <div class="login-logo logo-normal">
+                                <!-- <div class="login-logo logo-normal">
                                    <img src="{{URL::asset('build/img/logo.svg')}}" alt="img">
                                </div>
                                <a href="{{url('index')}}" class="login-logo logo-white">
                                    <img src="{{URL::asset('build/img/logo-white.svg')}}"  alt="Img">
-                               </a>
+                               </a> -->
                                <div class="login-userheading">
                                    <h3>Sign In</h3>
-                                   <h4 class="fs-16">Access the Dreamspos panel using your email and passcode.</h4>
+                                   <h4 class="fs-16">Masukkan email dan password untuk mengakses aplikasi.</h4>
                                </div>
                                 <div class="mb-3">
                                     <label class="form-label">Email <span class="text-danger"> *</span></label>
@@ -38,11 +38,11 @@
                                            <div class="custom-control custom-checkbox">
                                                <label class="checkboxs ps-4 mb-0 pb-0 line-height-1 fs-16 text-gray-6">
                                                    <input type="checkbox" class="form-control">
-                                                   <span class="checkmarks"></span>Remember me
+                                                   <span class="checkmarks"></span>Ingat Saya
                                                </label>
                                            </div>
                                            <div class="text-end">
-                                               <a class="text-orange fs-16 fw-medium" href="{{url('forgot-password')}}">Forgot Password?</a>
+                                               <a class="text-orange fs-16 fw-medium" href="{{url('forgot-password')}}">Lupa Password?</a>
                                            </div>
                                        </div>                                    
                                    </div>
@@ -51,7 +51,7 @@
                                    <button type="submit" class="btn btn-primary w-100">Sign In</button>
                                </div>
                                <div class="signinform">
-                                   <h4>New on our platform?<a href="{{url('register')}}" class="hover-a"> Create an account</a></h4>
+                                   <h4>Pengguna Baru?<a href="{{url('register')}}" class="hover-a"> Buat Akun</a></h4>
                                </div>
                                <div class="form-setlogin or-text">
                                    <h4>OR</h4>
@@ -84,6 +84,11 @@
                            </div>
                         </form>
                     </div>
+                    <div class="login-image">
+                        <img src="{{ asset('build/img/authentication/login.jpg') }}" 
+                            alt="Login Background" class="img-fluid w-100 h-100 object-fit-cover">
+                    </div>
+
                 </div>
 			</div>
 @endsection

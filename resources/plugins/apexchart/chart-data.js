@@ -492,10 +492,10 @@ chart.render();
 if($('#sales_charts').length > 0) {
 	var options = {
 		series: [{
-		name: 'Sales',
+		name: 'Tersalurkan',
 		data: [130, 210, 300, 290, 150, 50, 210, 280, 105],
 	  }, {
-		name: 'Purchase',
+		name: 'Tersisa',
 		data: [-150, -90, -50, -180, -50, -70, -100, -90, -105]
 	  }],
 	  colors: ['#28C76F', '#EA5455'],
