@@ -9,6 +9,15 @@ class FertilizerStock extends Model
 {
     use HasFactory;
 
-    protected $table = 'fertilizer_stock';
+    protected $table = 'fertilizer_stocks';
     protected $guarded = [];
+
+    /**
+     * Relasi ke tabel fertilizer_types
+     * Setiap stok pupuk pasti memiliki satu jenis pupuk tertentu.
+     */
+    public function fertilizerType()
+    {
+        return $this->belongsTo(FertilizerType::class, 'fertilizer_type_id');
+    }
 }

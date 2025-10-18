@@ -17,6 +17,10 @@ return new class extends Migration
             $table->date('birth_date')->nullable();
             $table->enum('gender', ['L', 'P']);
             $table->decimal('land_area', 8, 2)->nullable();
+            $table->string('land_location', 255)->nullable(); // Desa/Kecamatan
+            $table->enum('land_status', ['milik', 'sewa', 'garap'])->nullable();
+            $table->string('main_commodity', 255)->nullable();
+            $table->decimal('average_harvest', 8, 2)->nullable(); // ton per musim
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
